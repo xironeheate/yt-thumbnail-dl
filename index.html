@@ -17,6 +17,7 @@
 		<div align="center" style="font-size:1.5vw;">
 			<br>
 			<img src="" id="maxresdefault" width="50%">
+			<a href="" id="thumbdl" style="display:none; font-size: 1.3vw;" download="thumbnail">Download</a>
 		</div>
 		<script>
 			document.addEventListener("keypress", function(event) {
@@ -36,7 +37,10 @@
 			
 			function run(inputVal) {
 				var id = ytID(inputVal);
-				document.getElementById("maxresdefault").src = "https://img.youtube.com/vi/" + id + "/maxresdefault.jpg";
+				var imgUrl = "https://img.youtube.com/vi/" + id + "/maxresdefault.jpg";
+				document.getElementById("maxresdefault").src = imgUrl;
+				document.getElementById("thumbdl").href = imgUrl;
+				document.getElementById("thumbdl").style.display = "block";
 			}
 		</script>
 	</body>
